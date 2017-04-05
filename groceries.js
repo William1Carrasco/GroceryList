@@ -1,6 +1,14 @@
 function addItem(){
-
+  var list=document.getElementById("listDisplay");
+  var input=document.getElementById("newItem").value;
+  var item=document.createElement("li");
+  var itemName=document.createTextNode(input);
+  item.appendChild(itemName);
+  list.appendChild(item);
+  document.getElementById("newItem").value="";
 }
+
+
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
